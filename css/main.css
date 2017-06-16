@@ -98,6 +98,14 @@ h3 {
   letter-spacing: 1px;
 color: white;
 }
+
+h3.body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 1px;
+color: black;
+}
 h4 {
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
@@ -415,6 +423,9 @@ table .tr,td,th{
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+.item-boxes.blackBorder {
+    border-color:black;
 }
 .item-boxes:hover {
   background: #fff;

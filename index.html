@@ -55,6 +55,7 @@
           <div class="container">
             <div class="logo-menu">
               <a href="index.html" class="logo"><span class="lnr lnr-sync"><span class="lnr lnr-redo"></span></span> AgileCon 2017 | CarMax</a>
+                
               <button class="menu-button" id="open-button"><i class="lnr lnr-menu"></i></button>    
             </div>           
           </div>
@@ -67,6 +68,7 @@
               <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">AgileCon 2017</h1>
                 <h3 class="lead  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">Driving Innovation & Continuous Improvement</h3>
                 <h3 class="lead  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms" style="color:white !important;">June 28, 2017</h3>
+                <br/><h3 id="demo"></h3>
                 
                 
             </div>
@@ -719,6 +721,40 @@
         <div class="double-bounce2"></div>
       </div>
     </div>  
+      
+      
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 28, 2017 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+      
  
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="js/jquery-min.js"></script>
